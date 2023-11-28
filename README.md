@@ -26,8 +26,20 @@ The frontend will be running at http://localhost:3000
 
 Enter an address or zipcode to get the current weather conditions.
 
-You can click 
+## Screenshots
 
-## License
+### Search
 
-[MIT](https://choosealicense.com/licenses/mit/)
+![Search](https://raw.githubusercontent.com/temp-check/web/main/screenshots/1.png)
+
+### Results
+
+![Results](https://raw.githubusercontent.com/temp-check/web/main/screenshots/2.png)
+
+### History
+
+![History](https://raw.githubusercontent.com/temp-check/web/main/screenshots/3.png)
+
+### Not Found
+
+![Not Found](https://raw.githubusercontent.com/temp-check/web/main/screenshots/4.png)
