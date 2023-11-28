@@ -22,26 +22,8 @@ docker-compose up
 
 ## API
 
-Documentation on the API can be found [API Documentation](https://github.com/temp-check/api)
+Additional documentation for the API can be found [here](https://github.com/temp-check/api).
 
 ## Web Client
 
-Documentation on the web client can be found [Web Client Documentation](https://github.com/temp-check/web)
-
-## Screenshots
-
-### Search
-
-![Search](https://raw.githubusercontent.com/temp-check/web/main/screenshots/1.png)
-
-### Results
-
-![Results](https://raw.githubusercontent.com/temp-check/web/main/screenshots/2.png)
-
-### History
-
-![History](https://raw.githubusercontent.com/temp-check/web/main/screenshots/3.png)
-
-### Not Found
-
-![Not Found](https://raw.githubusercontent.com/temp-check/web/main/screenshots/4.png)
+Additional documentation on the web client can be found [here](https://github.com/temp-check/web).
