@@ -14,6 +14,15 @@ Or, if you already cloned it, you can run:
 git submodule update --init --recursive
 ```
 
+:warning: **Don't skip this step :warning: Run this from the root of the project, not from inside the `api` or `web` directories:
+
+```bash
+
+cd api && git submodule update --init --recursive && \
+cd ../web && git submodule update --init --recursive && cd ../
+
+```
+
 To launch the application, run:
 
 ```bash
