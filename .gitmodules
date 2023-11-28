@@ -1,6 +1,8 @@
 [submodule "web"]
 	path = web
 	url = git@github.com:temp-check/web.git
+  branch = main
 [submodule "api"]
 	path = api
 	url = git@github.com:temp-check/api.git
+  branch = main
