@@ -1,0 +1,49 @@
+<div id="<%= dom_id search %>">
+  <h3>
+    <%= search.address %>
+  </h3>
+
+  <% if search.error %>
+
+    <table>
+      <tr>
+        <th></th>
+        <th></th>
+      </tr>
+      <% search.error.each do |error| %>
+        <% error.each do |field, message| %>
+          <tr>
+            <td><%= field %></td>
+            <td><%= message %></td>
+          </tr>
+        <% end %>
+      <% end %>
+    </table>
+
+  <% elsif search.data %>
+    <table>
+      <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+      <% search.data["postal_code"]["temperature"]["forecast"]&.each do |forecast| %>
+      <tr>
+        <td class="align-left">
+          <% if forecast['date'] %>
+            <% parsed_date = Date.parse(forecast['date']) %>
+            <%= parsed_date.strftime("%a, %b #{parsed_date.day.ordinalize} %Y") %>
+          <% end %>
+        </td>
+        <td><%= image_tag forecast['icon'] unless forecast['icon'].nil? %></td>
+        <td><%= forecast['max_f'] %>&#176;</td>
+        <td> / </td>
+        <td><%= forecast['min_f'] %>&#176;</td>
+      </tr>
+      <% end %>
+    </table>
+  <% end %>
+
+</div>

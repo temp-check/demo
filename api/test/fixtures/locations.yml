@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  address: 1 market st sf
+
+two:
+  address: 87104
+
+invalid_address:
+  address: invalid address
+
