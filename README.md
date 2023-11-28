@@ -20,11 +20,13 @@ To launch the application, run:
 docker-compose up
 ```
 
-## Usage
+## API
 
-The frontend will be running at http://localhost:3000
+Documentation on the API can be found [API Documentation](https://github.com/temp-check/api)
 
-Enter an address or zipcode to get the current weather conditions.
+## Web Client
+
+Documentation on the web client can be found [Web Client Documentation](https://github.com/temp-check/web)
 
 ## Screenshots
 
