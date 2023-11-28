@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    volumes:
+      - ./web:/rails
+    ports:
+      - "3000:3000"
+    environment:
+      - RAILS_ENV=production
+
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    volumes:
+      - ./api:/rails
+    ports:
+      - "3001:3000"
+    environment:
+      - RAILS_ENV=production
+      - WEATHER_API=your_api_key_here
+    depends_on:
+      - db
+
+  db:
+    image: postgres:latest
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: api_db
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+
+volumes:
+  postgres_data:
