@@ -7,8 +7,27 @@ This project uses submodules, so you need to clone it with the `--recursive` fla
 ```bash
 git clone git@github.com:temp-check/demo.git --recursive
 ```
+
 Or, if you already cloned it, you can run:
 
 ```bash
 git submodule update --init --recursive
 ```
+
+To launch the application, run:
+
+```bash
+docker-compose up
+```
+
+## Usage
+
+The frontend will be running at http://localhost:3000
+
+Enter an address or zipcode to get the current weather conditions.
+
+You can click 
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
