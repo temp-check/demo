@@ -14,6 +14,14 @@ To launch the application, run:
 docker-compose up -d
 ```
 
+This will run in production mode and over ssl, the first time you access you'll see a wanring about the certificate being invalid. This is because the certificate is self signed. To get around this, you can either add the certificate to your trusted certificates.
+
+You may also need to add the following to your `/etc/hosts` file:
+
+```
+127.0.0.1 lvh.me
+```
+
 And then navigate to [https://lvh.me](https://lvh.me).
 
 To stop the application, run:
