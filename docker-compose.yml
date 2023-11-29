@@ -14,7 +14,6 @@ services:
       - DB_NAME=web_db
       - POSTGRES_USER=rails
       - POSTGRES_PASSWORD=password
-      - WEATHER_API=your_api_key_here
       - SECRET_KEY_BASE=9b76fda96cc790790a88573e94e4932bc9672d0309b77b8696ae18ac483d6b22104895ab76b7374ecfa00f11ffe3265f9fd5c9d0f36a3c99b144b18d599eae1e
     depends_on:
       - db
@@ -32,10 +31,20 @@ services:
       - DB_NAME=api_db
       - POSTGRES_USER=rails
       - POSTGRES_PASSWORD=password
-      - WEATHER_API=your_api_key_here
+      - WEATHER_API=f22ea5bd8bcc4871a40181313232511
       - SECRET_KEY_BASE=904a4d572f757061a1741fec17c154fb2f1ae52e73f955a515c22cf45980841bbf44657f5dd51286b39c302b3d008e64a9cde04b99729a2556072ac86ae334b8
     depends_on:
       - db
+  nginx:
+    image: nginx:latest
+    ports:
+      - "443:443"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./nginx:/etc/nginx/certs
+    depends_on:
+      - web
+      - api
 
   db:
     image: postgres:latest

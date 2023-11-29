@@ -31,6 +31,9 @@ RUN bundle install && \
 # Copy application code
 COPY . .
 
+# RUN RAILS_ENV=production bin/rails assets:precompile
+
+
 # Final stage for app image
 FROM base
 

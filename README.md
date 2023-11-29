@@ -11,7 +11,15 @@ git clone git@github.com:temp-check/demo.git
 To launch the application, run:
 
 ```bash
-docker-compose up
+docker-compose up -d
+```
+
+And then navigate to [https://lvh.me](https://lvh.me).
+
+To stop the application, run:
+
+```bash
+docker-compose down
 ```
 
 ## API

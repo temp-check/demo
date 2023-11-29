@@ -5,7 +5,7 @@ require 'json'
 class Search < ApplicationRecord
 
   def fetch_api_data
-    uri = URI('http://localhost:3000/api/v1/address')
+    uri = URI('http://localhost:3000/api/v1/address.json')
     request = Net::HTTP::Post.new(uri, 'Content-Type' => 'application/json')
     request.body = { q: address }.to_json
 
